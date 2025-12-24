@@ -1,3 +1,14 @@
+terraform {
+  required_providers {
+    newrelic = {
+      source  = "newrelic/newrelic" # これを書くことで hashicorp/newrelic を見に行くのを防ぎます
+    }
+  }
+}
+
+resource "newrelic_one_dashboard" "standard" {
+}
+
 resource "newrelic_one_dashboard" "standard" {
   name = "${var.tenant_name} 標準監視ダッシュボード"
 
