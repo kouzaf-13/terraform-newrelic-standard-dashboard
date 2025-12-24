@@ -7,9 +7,6 @@ terraform {
 }
 
 resource "newrelic_one_dashboard" "standard" {
-}
-
-resource "newrelic_one_dashboard" "standard" {
   name = "${var.tenant_name} 標準監視ダッシュボード"
 
   page {
